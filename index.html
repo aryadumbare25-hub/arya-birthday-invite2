@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>By Special Correspondence — Arya's Birthday</title>
+<link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+  <div class="stickers" aria-hidden="true">
+    <span class="sticker s1">🌹</span>
+    <span class="sticker s2">🪶</span>
+    <span class="sticker s3">🥂</span>
+    <span class="sticker s4">🦢</span>
+    <span class="sticker s5">✨</span>
+    <span class="sticker s6">🎭</span>
+    <span class="sticker s7">🌸</span>
+  </div>
+
+  <main class="card">
+    <div id="sealStage" class="seal-stage">
+      <div class="eyebrow">A Letter Arrives</div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fbf6ec" stroke-width="1.2">
+          <path d="M3 8.5 12 14l9-5.5M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z" />
+        </svg>
+      </div>
+      <div class="seal-label">Break the seal to read on</div>
+    </div>
+
+    <div id="letter" class="letter">
+      <div class="eyebrow">By Special Correspondence</div>
+      <h1 class="invite-title">A Most Diverting Affair</h1>
+      <p class="invite-sub">3rd of July · Evening</p>
+
+      <div class="rule"></div>
+
+      <div class="letter-body">
+        <p>Dearest Gentle Reader,</p>
+        <p>This author has learned, from a source of impeccable discretion, that Miss Arya is to celebrate the anniversary of her birth coming friday.
+        <p>You, esteemed friend, are hereby summoned to attend. Expect fine company, finer conversation, and revelry that shall be the talk of every drawing room come morning. There remains but one matter still undecided — the venue for the evening's festivities — and your vote, dear reader, shall settle it.</p>
+        
+      </div>
+
+      <dl class="details">
+        <dt>Date</dt>
+        <dd>3rd July</dd>
+        <dt>Time</dt>
+        <dd>7:00 PM onwards</dd>
+        <dt>Dress Code</dt>
+        <dd><span class="dress-tag">Cool &amp; Sexy</span></dd>
+      </dl>
+
+      <div class="cta-row">
+        <a href="invite.html" class="btn">Cast Your Vote →</a>
+      </div>
+
+      <div class="signed">Arya</div>
+    </div>
+  </main>
+
+  <script src="confetti.js?v=3"></script>
+  <script>
+    const stage = document.getElementById('sealStage');
+    const letter = document.getElementById('letter');
+    stage.addEventListener('click', () => {
+      burstConfetti(stage);
+      stage.style.display = 'none';
+      letter.classList.add('open');
+    });
+  </script>
+</body>
+</html>
